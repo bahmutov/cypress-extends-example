@@ -21,6 +21,7 @@ module.exports = (on, config) => {
   // the config does NOT give you unknown keys - only the keys the Cypress understands
   // so we can't just read key "extends". Instead we need to read cypress.json
   // TODO pass config filename via "config"!
+  // https://github.com/cypress-io/cypress/issues/5941
   const configFilename = join(__dirname, '..', '..', 'cypress.json')
   const loadedConfig = require(configFilename)
   console.log('cypress config file values', loadedConfig)
